@@ -8,7 +8,7 @@
 // Model URL from Teachable Machine
 //**************************************************
 //* as before, paste your lnk below
-let URL = "https://teachablemachine.withgoogle.com/models/yfMxI1NGx/";
+let URL = "https://teachablemachine.withgoogle.com/models/Jab2eClD4/";
 
 
 
@@ -118,17 +118,17 @@ function checkPose(prediction, video) {
 
         switch(poseNumber) {
             case '1':
-                if (time >= 0.05 && time <= 0.06 && !poseState.triggered) {
+                if (time >= 0.04 && time <= 0.05 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
             case '2':
-                if (time >= 0.07 && time <= 0.07 && !poseState.triggered) {
+                if (time >= 0.07 && time <= 0.08 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
             case '3':
-                if ((time >= 0.08 && time <= 0.09 && !poseState.firstWindowTriggered) ||
+                if ((time >= 0.09 && time <= 0.10 && !poseState.firstWindowTriggered) ||
                     (time >= 17.5 && time <= 19.5 && !poseState.secondWindowTriggered)) {
                     if (time <= 13.0) {
                         poseState.firstWindowTriggered = true;
@@ -141,12 +141,12 @@ function checkPose(prediction, video) {
                 }
                 break;
             case '4':
-                if (time >= 0.09 && time <= 0.10 && !poseState.triggered) {
+                if (time >= 0.11 && time <= 0.13 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
             case '5':
-                if (time >= 0.12 && !poseState.triggered) {
+                if (time >= 0.18 && !poseState.triggered) {
                     triggerExplosion(poseState);
                 }
                 break;
@@ -231,7 +231,7 @@ async function playInstructionVideo() {
     if (model) {
         processFrame();
     } else {
-        console.log("https://teachablemachine.withgoogle.com/models/yfMxI1NGx/");
+        console.log("https://teachablemachine.withgoogle.com/models/Jab2eClD4/");
     }
 }
 
