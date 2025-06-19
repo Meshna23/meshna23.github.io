@@ -259,3 +259,16 @@ function stopWebcam() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
 }
+function fixCanvas() {
+  const canvas = document.getElementById('canvas');
+  if (canvas) {
+    canvas.style.position = 'relative';
+    canvas.style.zIndex = '5';
+    canvas.style.pointerEvents = 'none';  // So clicks pass through canvas
+  }
+}
+async function init() {
+  // ... your existing code ...
+
+  fixCanvas();
+}
